@@ -1,5 +1,5 @@
 <div class="card m-2">
-  <img src="..." class="card-img-top" alt="...">
+  <%= cl_image_tag list.photo.key, alt: "text", :class => "card-img-top"%>
   <div class="card-body">
     <h5 class="card-title"><%= list.name %></h5>
     <%= link_to 'Details', list_path(list), :class => "btn btn-primary" %>
