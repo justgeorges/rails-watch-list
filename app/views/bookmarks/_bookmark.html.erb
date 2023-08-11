@@ -5,7 +5,7 @@
     class: 'btn btn-outline-danger btn-sm movie-action' do %>
     <i class="fa-solid fa-trash fa-sm"></i>
     <% end %>
-    <%= image_tag bookmark.movie.poster_url, alt: "movie poster" %>
+    <%= image_tag bookmark.movie.poster_url, alt: "movie poster" if bookmark.movie.poster %>
     <div class="card-product-infos">
       <h2><%= bookmark.movie.title %></h2>
       <p><%= bookmark.comment %></p>
