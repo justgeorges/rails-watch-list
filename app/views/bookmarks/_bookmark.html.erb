@@ -1,12 +1,14 @@
-<div class="card-product">
-  <%= link_to bookmark_path(bookmark),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
-  class: 'btn btn-outline-danger btn-sm movie-action' do %>
-  <i class="fa-solid fa-trash fa-sm"></i>
-  <% end %>
-  <%= image_tag bookmark.movie.poster_url, alt: "movie poster" %>
-  <div class="card-product-infos">
-    <h2><%= bookmark.movie.title %></h2>
-    <p><%= bookmark.comment %></p>
+<div class="mb-3">
+  <div class="card-product">
+    <%= link_to bookmark_path(bookmark),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+    class: 'btn btn-outline-danger btn-sm movie-action' do %>
+    <i class="fa-solid fa-trash fa-sm"></i>
+    <% end %>
+    <%= image_tag bookmark.movie.poster_url, alt: "movie poster" %>
+    <div class="card-product-infos">
+      <h2><%= bookmark.movie.title %></h2>
+      <p><%= bookmark.comment %></p>
+    </div>
   </div>
 </div>
